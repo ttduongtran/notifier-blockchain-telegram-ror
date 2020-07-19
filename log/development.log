@@ -1,6 +1,6 @@
-  [1m[35m (152.1ms)[0m  [1m[35mCREATE DATABASE "content-ror_development" ENCODING = 'unicode'[0m
+  [1m[35m (152.1ms)[0m  [1m[35mCREATE DATABASE "jasmie-bot_development" ENCODING = 'unicode'[0m
   ↳ bin/rails:4
-  [1m[35m (57.0ms)[0m  [1m[35mCREATE DATABASE "content-ror_test" ENCODING = 'unicode'[0m
+  [1m[35m (57.0ms)[0m  [1m[35mCREATE DATABASE "jasmie-bot_test" ENCODING = 'unicode'[0m
   ↳ bin/rails:4
 Started GET "/" for ::1 at 2020-07-04 11:37:04 +0700
 Processing by Rails::WelcomeController#index as HTML
@@ -2267,6 +2267,515 @@ Completed 200 OK in 82ms (Views: 63.1ms | ActiveRecord: 5.5ms)
 
 
 Started GET "/sw.js" for ::1 at 2020-07-05 23:09:34 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/sw.js"):
+  
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:38:in `call_app'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/engine.rb:524:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (150.5ms)[0m  [1m[35mCREATE DATABASE "jasmie-bot_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (60.3ms)[0m  [1m[35mCREATE DATABASE "jasmie-bot_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5103216310282087305)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to DeviseCreateManagers (20200704163553)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "managers" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200704163553_devise_create_managers.rb:5
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_managers_on_email" ON "managers"  ("email")[0m
+  ↳ db/migrate/20200704163553_devise_create_managers.rb:39
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_managers_on_reset_password_token" ON "managers"  ("reset_password_token")[0m
+  ↳ db/migrate/20200704163553_devise_create_managers.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200704163553"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-11 07:41:39.039573"], ["updated_at", "2020-07-11 07:41:39.039573"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5103216310282087305)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started bot poller.
+Processing by TelegramWebhooksController#message
+  Update: {"update_id":200311798,"message":{"message_id":3,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456196,"text":"abc"}}
+Responded with message
+Completed in 416ms
+Processing by TelegramWebhooksController#message
+  Update: {"update_id":200311799,"message":{"message_id":5,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456298,"text":"hello"}}
+Responded with message
+Completed in 377ms
+Processing by TelegramWebhooksController#message
+  Update: {"update_id":200311800,"message":{"message_id":7,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456313,"text":"remind_me"}}
+Responded with message
+Completed in 372ms
+Processing by TelegramWebhooksController#memo!
+  Update: {"update_id":200311801,"message":{"message_id":9,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456357,"text":"/memo abb","entities":[{"offset":0,"length":5,"type":"bot_command"}]}}
+Responded with message
+Completed in 385ms
+Processing by TelegramWebhooksController#help!
+  Update: {"update_id":200311802,"message":{"message_id":11,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456374,"text":"/help","entities":[{"offset":0,"length":5,"type":"bot_command"}]}}
+Responded with message
+Completed in 409ms
+Processing by TelegramWebhooksController#keyboard!
+  Update: {"update_id":200311803,"message":{"message_id":13,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456381,"text":"/keyboard","entities":[{"offset":0,"length":9,"type":"bot_command"}]}}
+Responded with message
+Completed in 377ms
+Processing by TelegramWebhooksController#keyboard!
+  Update: {"update_id":200311804,"message":{"message_id":15,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456386,"text":"Lorem"}}
+Responded with message
+Completed in 362ms
+Processing by TelegramWebhooksController#inline_keyboard!
+  Update: {"update_id":200311805,"message":{"message_id":17,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456393,"text":"/inline_keyboard","entities":[{"offset":0,"length":16,"type":"bot_command"}]}}
+Responded with message
+Completed in 371ms
+Processing by TelegramWebhooksController#callback_query
+  Update: {"update_id":200311806,"callback_query":{"id":"2434622482124200349","from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"message":{"message_id":18,"from":{"id":1342676582,"is_bot":true,"first_name":"jasmiebot","username":"JasmieBot"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456394,"text":"Check my inline keyboard:","reply_markup":{"inline_keyboard":[[{"text":"Answer with alert","callback_data":"alert"},{"text":"Without alert","callback_data":"no_alert"}],[{"text":"Open gem repo","url":"https://github.com/telegram-bot-rb/telegram-bot"}]]}},"chat_instance":"-1900888791664187232","data":"alert"}}
+Responded with answer_callback_query
+Completed in 352ms
+Processing by TelegramWebhooksController#callback_query
+  Update: {"update_id":200311807,"callback_query":{"id":"2434622481384250737","from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"message":{"message_id":18,"from":{"id":1342676582,"is_bot":true,"first_name":"jasmiebot","username":"JasmieBot"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456394,"text":"Check my inline keyboard:","reply_markup":{"inline_keyboard":[[{"text":"Answer with alert","callback_data":"alert"},{"text":"Without alert","callback_data":"no_alert"}],[{"text":"Open gem repo","url":"https://github.com/telegram-bot-rb/telegram-bot"}]]}},"chat_instance":"-1900888791664187232","data":"no_alert"}}
+Responded with answer_callback_query
+Completed in 362ms
+Processing by TelegramWebhooksController#callback_query
+  Update: {"update_id":200311808,"callback_query":{"id":"2434622483240645506","from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"message":{"message_id":18,"from":{"id":1342676582,"is_bot":true,"first_name":"jasmiebot","username":"JasmieBot"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456394,"text":"Check my inline keyboard:","reply_markup":{"inline_keyboard":[[{"text":"Answer with alert","callback_data":"alert"},{"text":"Without alert","callback_data":"no_alert"}],[{"text":"Open gem repo","url":"https://github.com/telegram-bot-rb/telegram-bot"}]]}},"chat_instance":"-1900888791664187232","data":"no_alert"}}
+Responded with answer_callback_query
+Completed in 353ms
+Processing by TelegramWebhooksController#last_chosen_inline_result!
+  Update: {"update_id":200311809,"message":{"message_id":19,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594456414,"text":"/last_chosen_inline_result","entities":[{"offset":0,"length":26,"type":"bot_command"}]}}
+Responded with message
+Completed in 365ms
+Processing by TelegramWebhooksController#start!
+  Update: {"update_id":200311810,"message":{"message_id":21,"from":{"id":528692630,"is_bot":false,"first_name":"Quinn","last_name":"Nguyen","username":"QuinnNK"},"chat":{"id":528692630,"first_name":"Quinn","last_name":"Nguyen","username":"QuinnNK","type":"private"},"date":1594456467,"text":"/start","entities":[{"offset":0,"length":6,"type":"bot_command"}]}}
+Responded with message
+Completed in 410ms
+Processing by TelegramWebhooksController#help!
+  Update: {"update_id":200311811,"message":{"message_id":23,"from":{"id":528692630,"is_bot":false,"first_name":"Quinn","last_name":"Nguyen","username":"QuinnNK","language_code":"en"},"chat":{"id":528692630,"first_name":"Quinn","last_name":"Nguyen","username":"QuinnNK","type":"private"},"date":1594456488,"text":"/help","entities":[{"offset":0,"length":5,"type":"bot_command"}]}}
+Responded with message
+Completed in 377ms
+Processing by TelegramWebhooksController#memo!
+  Update: {"update_id":200311812,"message":{"message_id":25,"from":{"id":528692630,"is_bot":false,"first_name":"Quinn","last_name":"Nguyen","username":"QuinnNK","language_code":"en"},"chat":{"id":528692630,"first_name":"Quinn","last_name":"Nguyen","username":"QuinnNK","type":"private"},"date":1594456513,"text":"/memo giá bid","entities":[{"offset":0,"length":5,"type":"bot_command"}]}}
+Responded with message
+Completed in 457ms
+Started bot poller.
+Processing by TelegramWebhooksController#message
+  Update: {"update_id":200311813,"message":{"message_id":27,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594990088,"text":"hi"}}
+Responded with message
+Completed in 519ms
+Processing by TelegramWebhooksController#message
+  Update: {"update_id":200311814,"message":{"message_id":29,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594990620,"text":"ahihi"}}
+Responded with message
+Completed in 483ms
+Processing by TelegramWebhooksController#help!
+  Update: {"update_id":200311815,"message":{"message_id":31,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594990631,"text":"/help","entities":[{"offset":0,"length":5,"type":"bot_command"}]}}
+Responded with message
+Completed in 488ms
+Processing by TelegramWebhooksController#start!
+  Update: {"update_id":200311816,"message":{"message_id":33,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594990638,"text":"/start","entities":[{"offset":0,"length":6,"type":"bot_command"}]}}
+Responded with message
+Completed in 479ms
+Processing by TelegramWebhooksController#memo!
+  Update: {"update_id":200311817,"message":{"message_id":35,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594990647,"text":"/memo ahii","entities":[{"offset":0,"length":5,"type":"bot_command"}]}}
+Responded with message
+Completed in 474ms
+Processing by TelegramWebhooksController#keyboard!
+  Update: {"update_id":200311818,"message":{"message_id":37,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594990663,"text":"/keyboard","entities":[{"offset":0,"length":9,"type":"bot_command"}]}}
+Responded with message
+Completed in 499ms
+Processing by TelegramWebhooksController#keyboard!
+  Update: {"update_id":200311819,"message":{"message_id":39,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594990669,"text":"Lorem"}}
+Responded with message
+Completed in 501ms
+Processing by TelegramWebhooksController#last_chosen_inline_result!
+  Update: {"update_id":200311820,"message":{"message_id":41,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594990689,"text":"/last_chosen_inline_result","entities":[{"offset":0,"length":26,"type":"bot_command"}]}}
+Responded with message
+Completed in 481ms
+Processing by TelegramWebhooksController#setinlinefeedback!
+  Update: {"update_id":200311821,"message":{"message_id":43,"from":{"id":566854719,"is_bot":false,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","language_code":"en"},"chat":{"id":566854719,"first_name":"Duong","last_name":"Tran","username":"ttduongtran","type":"private"},"date":1594990701,"text":"/setinlinefeedback","entities":[{"offset":0,"length":18,"type":"bot_command"}]}}
+Responded with message
+Completed in 530ms
+Started GET "/" for ::1 at 2020-07-19 17:02:15 +0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "jasmie-bot_development" does not exist
+):
+  
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_handling.rb:90:in `connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/migration.rb:554:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:38:in `call_app'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/engine.rb:524:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sw.js" for ::1 at 2020-07-19 17:02:17 +0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "jasmie-bot_development" does not exist
+):
+  
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/connection_handling.rb:90:in `connection'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/migration.rb:554:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:38:in `call_app'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/engine.rb:524:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (202.5ms)[0m  [1m[35mCREATE DATABASE "jasmie-bot_development" ENCODING = 'unicode'[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (51.7ms)[0m  [1m[35mCREATE DATABASE "jasmie-bot_test" ENCODING = 'unicode'[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (32.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5103216310282087305)[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to DeviseCreateManagers (20200704163553)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "managers" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200704163553_devise_create_managers.rb:5
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_managers_on_email" ON "managers"  ("email")[0m
+  ↳ db/migrate/20200704163553_devise_create_managers.rb:39
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_managers_on_reset_password_token" ON "managers"  ("reset_password_token")[0m
+  ↳ db/migrate/20200704163553_devise_create_managers.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200704163553"]]
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-19 10:02:40.618872"], ["updated_at", "2020-07-19 10:02:40.618872"]]
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5103216310282087305)[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/duongtran/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Started GET "/" for ::1 at 2020-07-19 17:02:46 +0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ .bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Web::HomeController#index as HTML
+  Rendering web/home/index.html.slim within layouts/application
+  Rendered web/home/index.html.slim within layouts/application (8.1ms)
+Completed 200 OK in 5046ms (Views: 5040.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sw.js" for ::1 at 2020-07-19 17:02:53 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/sw.js"):
+  
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:38:in `call_app'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/engine.rb:524:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/crypto_notifier" for ::1 at 2020-07-19 17:02:54 +0700
+  
+ActionController::RoutingError (uninitialized constant Web::CryptoNotifierController):
+  
+.bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+.bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+.bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+.bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/inflector/methods.rb:285:in `const_get'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/inflector/methods.rb:285:in `block in constantize'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/inflector/methods.rb:281:in `each'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/inflector/methods.rb:281:in `inject'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/inflector/methods.rb:281:in `constantize'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/http/request.rb:81:in `controller_class'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/routing/route_set.rb:46:in `controller'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/journey/router.rb:35:in `each'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/journey/router.rb:35:in `serve'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/routing/route_set.rb:840:in `call'
+.bundle/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+.bundle/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+.bundle/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/migration.rb:559:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:38:in `call_app'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/engine.rb:524:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sw.js" for ::1 at 2020-07-19 17:02:56 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/sw.js"):
+  
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:38:in `call_app'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/engine.rb:524:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/crypto_notifier" for ::1 at 2020-07-19 17:04:09 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ .bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  
+LoadError (Unable to autoload constant Web::CryptoNotifierController, expected /Users/duongtran/workspace/duong-projects/notifier-blockchain-telegram-ror/app/controllers/web/crypto_notifier_controller.rb to define it):
+  
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/dependencies.rb:511:in `load_missing_constant'
+.bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/active_support.rb:61:in `block in load_missing_constant'
+.bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/active_support.rb:17:in `allow_bootsnap_retry'
+.bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `load_missing_constant'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/dependencies.rb:195:in `const_missing'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/inflector/methods.rb:285:in `const_get'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/inflector/methods.rb:285:in `block in constantize'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/inflector/methods.rb:281:in `each'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/inflector/methods.rb:281:in `inject'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/inflector/methods.rb:281:in `constantize'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/dependencies.rb:582:in `get'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/dependencies.rb:613:in `constantize'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/journey/router.rb:35:in `each'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/journey/router.rb:35:in `serve'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/routing/route_set.rb:840:in `call'
+.bundle/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:36:in `block in call'
+.bundle/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `catch'
+.bundle/ruby/2.6.0/gems/warden-1.2.8/lib/warden/manager.rb:34:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+.bundle/ruby/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/migration.rb:559:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/callbacks.rb:98:in `run_callbacks'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+.bundle/ruby/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:38:in `call_app'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `block in call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/rack/logger.rb:26:in `call'
+.bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+.bundle/ruby/2.6.0/gems/activesupport-5.2.4.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+.bundle/ruby/2.6.0/gems/actionpack-5.2.4.3/lib/action_dispatch/middleware/static.rb:127:in `call'
+.bundle/ruby/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+.bundle/ruby/2.6.0/gems/railties-5.2.4.3/lib/rails/engine.rb:524:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+.bundle/ruby/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sw.js" for ::1 at 2020-07-19 17:04:11 +0700
   
 ActionController::RoutingError (No route matches [GET] "/sw.js"):
   

@@ -61,7 +61,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "content-ror_#{Rails.env}"
+  # config.active_job.queue_name_prefix = "jasmie-bot_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
 
@@ -91,4 +91,12 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+
+  # Set application domain, to be able to run `rake telegram:bot:set_webhook`
+  # routes.default_url_options = {host: 'yourdomain.com', protocol: 'https'}
+
+  # Configure session store for telegram bot.
+  config.telegram_updates_controller.session_store = :file_store,
+    Rails.root.join('tmp', 'session_store')
 end
